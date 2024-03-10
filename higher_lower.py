@@ -5,6 +5,8 @@ import os
 
 A = random.choice(higher_game_data.data)
 B = random.choice(higher_game_data.data)
+if A == B:
+    B = random.choice(higher_game_data.data)
 
 should_continue= True
 
@@ -17,7 +19,7 @@ while should_continue:
         print(f"Your right! Current score: {score}.")
     print("Compare A:",A['name'],", a", A['description'],", from",A['country'])
     print(higher_lower_art.vs)
-    print("Compare B:",B['name'],", a", B['description'],", from",B['country'])
+    print("Against B:",B['name'],", a", B['description'],", from",B['country'])
 
     correct = ""
     if A['follower_count']>B['follower_count']:
